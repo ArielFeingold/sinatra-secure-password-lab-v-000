@@ -21,9 +21,9 @@ class ApplicationController < Sinatra::Base
   		# if user[:username] != nil && user[:password] !=nil
       #   user.save
   			redirect "/login"
-  		# else
-  		# 	redirect "/failure"
-  		# end
+  		else
+  			redirect "/failure"
+  		end
   	end
 
   get '/account' do
