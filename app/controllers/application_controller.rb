@@ -39,7 +39,8 @@ class ApplicationController < Sinatra::Base
 
   post "/login" do
     binding.pry
-    ##your code here
+    if params[:username] == ""
+      redirect "/failure"
   end
 
   get "/failure" do
